@@ -6,14 +6,12 @@ from entity.station import Station
 class WPP(Station):
     def __init__(self, hydro_energy=0, hydro_error=0, money=0, energy=0, fail=0):
         super().__init__(money, energy, fail)
-        self.__hydro_energy = hydro_energy if \
-            isinstance(hydro_energy, (int, float)) and hydro_energy >= 0 else 0
-        self.__hydro_error = hydro_error if \
-            isinstance(hydro_error, (int, float)) and hydro_error >= 0 else 0
+        self.__hydro_energy = hydro_energy
+        self.__hydro_error = hydro_error
 
     @property
     def hydro_energy(self):
-        return self.hydro_energy
+        return self.__hydro_energy
 
     @hydro_energy.setter
     def hydro_energy(self, hydro_energy):

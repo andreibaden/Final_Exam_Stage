@@ -8,9 +8,9 @@ from head_office.head_report import HeadReport
 def main():
     region_report = RegReport()
 
-    tes1 = TES(0, 0, 0, 0, 0)
-    dss1 = DSS(-550, -5400, -789000, -7)
-    wpp1 = WPP(88, 4, 2, 8, 4)
+    tes1 = TES(25600, 15, 897000, 788900, 31)
+    dss1 = DSS(550, 5400, 789000, 7)
+    wpp1 = WPP(88000, 8, 22550, 84000, 4)
     tes2 = TES(125600, 5, 689000, 78900, 43)
     dss2 = DSS(860, 4500, 7800, 8)
     wpp2 = WPP(77000, 4, 90000, 35000, 17)

@@ -34,7 +34,7 @@ class TESTest(unittest.TestCase):
         self.assertEqual(exp_fail, tes.fail)
 
     def test_negative_tes_thermal_energy(self):
-        thermal_energy = -290
+        thermal_energy = -20
         expected = 0
 
         tes = TES(thermal_energy=thermal_energy)

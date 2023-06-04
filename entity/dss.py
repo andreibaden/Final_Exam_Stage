@@ -6,18 +6,16 @@ from entity.station import Station
 class DSS(Station):
     def __init__(self, electric_loss=0, money=0, energy=0, fail=0):
         super().__init__(money, energy, fail)
-        self.__electric_loss = electric_loss if \
-            isinstance(electric_loss, (int, float)) and electric_loss >= 0 else 0
+        self.__electric_loss = electric_loss
 
     @property
     def electric_loss(self):
-        return self.electric_loss
+        return self.__electric_loss
 
     @electric_loss.setter
     def electric_loss(self, electric_loss):
         if isinstance(electric_loss, (int, float)) and electric_loss > 0:
             self.__electric_loss = electric_loss
-
 
     def __str__(self):
         return (f"DSS (distribution substation): "
